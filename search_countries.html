@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+    <script src="js/angular.min.js"></script>
+</head>
+<body ng-init="list=['India', 'Australia', 'USA', 'Switzerland', 'UK', 'Germany', 'Finland', 'Scotland', 'New-Zealand']" >
+
+    <input type="text" ng-model="search"/>
+
+    <ul>
+        <li ng-repeat="item in list | filter:search">
+            {{item}}
+        </li>
+    </ul>
+
+</body>
+</html>
